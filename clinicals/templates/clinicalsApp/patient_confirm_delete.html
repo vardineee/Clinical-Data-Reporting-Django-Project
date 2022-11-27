@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Delete Patient</title>
+    <link rel="stylesheet" href="{% static "css/clinicals.css"%}">
+  </head>
+  <body>
+
+      <form  method="post">
+        {{forms.as_p}}
+        {%csrf_token%}
+        <h2>Delete Patient {{patient.firstName}}?</h2>
+          <input type="Submit" value="Delete">
+          <a href="/">Cancel</a>
+
+      </form>
+
+
+
+
+
+
+  </body>
+</html>
